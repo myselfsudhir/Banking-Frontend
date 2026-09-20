@@ -1,0 +1,271 @@
+.create-account-page {
+  min-height: calc(100vh - 80px);
+}
+
+.create-account-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* Main form */
+
+.create-account-card {
+  overflow: hidden;
+}
+
+.create-account-card .card-header {
+  background: #fafbfc;
+}
+
+.create-account-card .card-header h2 {
+  font-size: 18px;
+}
+
+/* Amount */
+
+.amount-input {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  overflow: hidden;
+  background: white;
+
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.amount-input:focus-within {
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+.amount-input span {
+  padding-left: 14px;
+
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.amount-input input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  padding: 12px 14px 12px 8px;
+
+  color: var(--text-primary);
+  background: transparent;
+}
+
+/* Buttons */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  margin-top: 28px;
+  padding-top: 20px;
+
+  border-top: 1px solid var(--border);
+}
+
+/* Right information card */
+
+.account-info-card {
+  background: linear-gradient(145deg, #1769aa, #0d4f82);
+
+  color: white;
+}
+
+.account-info-card .card-body {
+  padding: 28px;
+}
+
+.account-icon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  font-size: 26px;
+}
+
+.account-info-card h3 {
+  margin: 18px 0 10px;
+
+  font-size: 21px;
+}
+
+.account-info-card p {
+  margin: 0 0 25px;
+
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 16px;
+
+  font-size: 14px;
+}
+
+.info-item span {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  font-size: 12px;
+}
+
+/* Success */
+
+.success-card {
+  max-width: 650px;
+
+  margin: 40px auto;
+
+  padding: 40px;
+
+  text-align: center;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #ecfdf3;
+  color: var(--success);
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.success-card h1 {
+  margin: 0;
+
+  font-size: 26px;
+}
+
+.success-subtitle {
+  margin: 10px 0 28px;
+
+  color: var(--text-secondary);
+}
+
+.account-summary {
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  text-align: left;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 18px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row span {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.summary-row strong {
+  font-size: 14px;
+}
+
+.status-active {
+  color: var(--success);
+}
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .create-account-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .account-info-card {
+    order: 2;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .success-card {
+    padding: 28px 20px;
+  }
+
+  .success-actions {
+    flex-direction: column;
+  }
+
+  .success-actions .btn {
+    width: 100%;
+  }
+
+  .summary-row {
+    gap: 15px;
+  }
+}

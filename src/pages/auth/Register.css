@@ -1,0 +1,91 @@
+.register-container {
+  min-height: 650px;
+}
+
+/* =================================
+   REGISTRATION FORM
+   ================================= */
+
+.register-container .auth-form {
+  gap: 17px;
+}
+
+.register-container .auth-heading {
+  margin-bottom: 24px;
+}
+
+.register-container .auth-heading h2 {
+  font-size: 27px;
+}
+
+/* =================================
+   FIELD HINT
+   ================================= */
+
+.field-hint {
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+/* =================================
+   SUCCESS MESSAGE
+   ================================= */
+
+.auth-success {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 20px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #bbf7d0;
+
+  border-radius: 8px;
+
+  background: #f0fdf4;
+
+  color: var(--success);
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+.auth-success span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #dcfce7;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+/* =================================
+   MOBILE
+   ================================= */
+
+@media (max-width: 760px) {
+  .register-container {
+    min-height: auto;
+  }
+
+  .register-container .auth-brand-content {
+    margin-top: 35px;
+  }
+}

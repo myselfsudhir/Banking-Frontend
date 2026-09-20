@@ -1,0 +1,258 @@
+.accounts-page {
+  max-width: 1100px;
+}
+
+/* -----------------------------
+   Page Header
+----------------------------- */
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #172b4d;
+}
+
+.page-header p {
+  margin: 0;
+  color: #6b7a90;
+  font-size: 14px;
+}
+
+/* -----------------------------
+   Search Card
+----------------------------- */
+
+.account-search-card {
+  background: #ffffff;
+  border: 1px solid #e1e7ef;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(20, 40, 70, 0.04);
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  color: #172b4d;
+}
+
+.section-title p {
+  margin: 0;
+  font-size: 13px;
+  color: #718096;
+}
+
+.account-search-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.input-group {
+  flex: 1;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #344563;
+}
+
+.input-group input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid #d5dce5;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+  color: #172b4d;
+  background: #ffffff;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #1677c8;
+  box-shadow: 0 0 0 3px rgba(22, 119, 200, 0.1);
+}
+
+.primary-button {
+  height: 44px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 7px;
+  background: #1677c8;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+.primary-button:hover {
+  background: #1265aa;
+}
+
+.primary-button:active {
+  transform: translateY(1px);
+}
+
+.primary-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* -----------------------------
+   Error
+----------------------------- */
+
+.account-error {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 7px;
+  background: #fff1f0;
+  border: 1px solid #ffd6d2;
+  color: #c53030;
+  font-size: 13px;
+}
+
+/* -----------------------------
+   Account Details
+----------------------------- */
+
+.account-details-card {
+  background: #ffffff;
+  border: 1px solid #e1e7ef;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(20, 40, 70, 0.04);
+}
+
+.account-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 24px;
+  border-bottom: 1px solid #e6ebf1;
+}
+
+.account-card-header h2 {
+  margin: 4px 0 0;
+  font-size: 20px;
+  color: #172b4d;
+}
+
+.card-label {
+  display: block;
+  font-size: 12px;
+  color: #718096;
+  margin-bottom: 4px;
+}
+
+/* -----------------------------
+   Status
+----------------------------- */
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background: #e9fbf2;
+  color: #00875a;
+}
+
+.status-badge.blocked {
+  background: #fff1f0;
+  color: #de350b;
+}
+
+/* -----------------------------
+   Balance
+----------------------------- */
+
+.balance-section {
+  padding: 25px 24px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e6ebf1;
+}
+
+.balance {
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #172b4d;
+}
+
+/* -----------------------------
+   Account Information
+----------------------------- */
+
+.account-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.info-item {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e6ebf1;
+}
+
+.info-item:nth-child(odd) {
+  border-right: 1px solid #e6ebf1;
+}
+
+.info-item strong {
+  font-size: 14px;
+  color: #172b4d;
+}
+
+/* -----------------------------
+   Responsive
+----------------------------- */
+
+@media (max-width: 700px) {
+  .account-search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+
+  .account-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-item:nth-child(odd) {
+    border-right: none;
+  }
+
+  .account-card-header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+}
