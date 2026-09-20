@@ -5,32 +5,27 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 
-# Copy dependency files first
 COPY package*.json ./
 
-# Install dependencies
 RUN npm ci
 
-# Copy application source
 COPY . .
 
-# Build production application
 RUN npm run build
 
 
 # ==============================
-# Stage 2: Serve using Nginx
+# Stage 2: Nginx
 # ==============================
 FROM nginx:alpine
 
-# Remove default nginx content
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy Vite production build
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Expose HTTP port
+# Custom nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
 
-# Start nginx
 CMD ["nginx", "-g", "daemon off;"]
